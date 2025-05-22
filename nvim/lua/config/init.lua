@@ -1,0 +1,5 @@
+require("config.lazy")
+require("config.options")
+require("config.remap")
+require("config.snippets")
+require("config.neotree-config")
