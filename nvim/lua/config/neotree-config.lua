@@ -35,7 +35,7 @@ require("nvim-tree").setup({
 		open_file = { quit_on_open = true },
 	},
 	update_focused_file = {
-		enabled = true,
+		-- enabled = true,
 		update_cwd = true,
 	},
 	git = {

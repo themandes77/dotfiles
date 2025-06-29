@@ -2,6 +2,13 @@ local km = vim.keymap
 local fzf = require("fzf-lua")
 local mini = require("mini.files")
 
+---- // Neovim binds \\ ----
+km.set("n", "<c-k>", ":wincmd k<CR>")
+km.set("n", "<c-j>", ":wincmd j<CR>")
+km.set("n", "<c-h>", ":wincmd h<CR>")
+km.set("n", "<c-l>", ":wincmd l<CR>")
+km.set("n", "<C-d>", "<C-d>zz")
+km.set("n", "<C-d>", "<C-d>zz")
 km.set("n", "<C-d>", "<C-d>zz")
 km.set("n", "<C-u>", "<C-u>zz")
 ---- // Open mini.files \\ ----
@@ -23,3 +30,5 @@ km.set("n", "<leader>st", function()
 	vim.cmd.wincmd("J")
 	vim.api.nvim_win_set_height(0, 10)
 end)
+---- // Lazy Git \\ ----
+km.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
