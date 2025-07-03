@@ -1,9 +1,9 @@
 local km = vim.keymap
 local fzf = require("fzf-lua")
-local mini = require("mini.files")
 
 ---- // Neovim binds \\ ----
 km.set("n", "<c-k>", ":wincmd k<CR>")
+km.set("n", "sf", vim.cmd.Ex)
 km.set("n", "<c-j>", ":wincmd j<CR>")
 km.set("n", "<c-h>", ":wincmd h<CR>")
 km.set("n", "<c-l>", ":wincmd l<CR>")
@@ -11,8 +11,6 @@ km.set("n", "<C-d>", "<C-d>zz")
 km.set("n", "<C-d>", "<C-d>zz")
 km.set("n", "<C-d>", "<C-d>zz")
 km.set("n", "<C-u>", "<C-u>zz")
----- // Open mini.files \\ ----
-km.set("n", "sf", mini.open, { desc = "Mini.files" })
 ---- // Open Lazy \\ ----
 km.set("n", "<leader>p", "<CMD>Lazy<CR>", { desc = "Open lazy plugin manager" })
 ---- // Open Mason \\ ----
