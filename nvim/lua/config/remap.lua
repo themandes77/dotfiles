@@ -3,7 +3,7 @@ local fzf = require("fzf-lua")
 
 ---- // Neovim binds \\ ----
 km.set("n", "<c-k>", ":wincmd k<CR>")
-km.set("n", "sf", vim.cmd.Ex)
+km.set("n", "sf", "<CMD>Oil<CR>", { desc = "Open Oil" })
 km.set("n", "<c-j>", ":wincmd j<CR>")
 km.set("n", "<c-h>", ":wincmd h<CR>")
 km.set("n", "<c-l>", ":wincmd l<CR>")
