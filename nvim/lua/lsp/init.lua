@@ -1,0 +1,1 @@
+require("lsp.luau-lsp")
