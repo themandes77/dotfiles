@@ -24,12 +24,6 @@ obsidian.setup({
 	},
 
 	mappings = {
-		["<leader>ch"] = {
-			action = function()
-				return obsidian.util.toggle_checkbox()
-			end,
-			opts = { noremap = true, expr = true, buffer = true },
-		},
 		["<leader>of"] = {
 			action = function()
 				return obsidian.util.smart_action()

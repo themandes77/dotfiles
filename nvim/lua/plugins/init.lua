@@ -1,3 +1,5 @@
+-- ts is so ass
+
 require("plugins.treesitter")
 require("plugins.autopairs")
 require("plugins.blinkcmp")
@@ -21,5 +23,4 @@ require("plugins.render-markdown")
 require("plugins.strudel")
 require("plugins.ufo")
 require("plugins.vim-tmux-navigator")
-
-require("ibl").setup()
+require("plugins.packmanager")
