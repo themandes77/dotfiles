@@ -1,5 +1,7 @@
-vim.pack.add({
-	{ src = "https://github.com/gruvw/strudel.nvim" },
-})
-
-require("strudel").setup()
+return {
+	"gruvw/strudel.nvim",
+	build = "npm install",
+	config = function()
+		require("strudel").setup()
+	end,
+}

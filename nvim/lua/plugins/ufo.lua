@@ -1,10 +1,11 @@
-vim.pack.add({
-	{ src = "https://github.com/kevinhwang91/promise-async" },
-	{ src = "https://github.com/kevinhwang91/nvim-ufo" },
-})
-
-require("ufo").setup({
-	provider_selector = function(bufnr, filetype, buftype)
-		return { "lsp", "indent" }
+return {
+	"kevinhwang91/nvim-ufo",
+	dependencies = {
+		"kevinhwang91/promise-async",
+	},
+	config = function()
+		provider_selector = function(bufnr, filetype, buftype)
+			return { "lsp", "indent" }
+		end
 	end,
-})
+}

@@ -1,8 +1,7 @@
-vim.pack.add({
-	{ src = "https://github.com/nvimtools/none-ls.nvim" },
-})
-
-local null_ls = require("null-ls")
+return {
+"nvimtools/none-ls.nvim",
+config = function()
+	local null_ls = require("null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
@@ -29,3 +28,5 @@ null_ls.setup({
 		end
 	end,
 })
+end
+}

@@ -29,7 +29,6 @@ require("luau-lsp").setup({
 	sourcemap = {
 		enabled = true,
 		autogenerate = true,
-		generator_cmd = { "argon", "sourcemap", "--watch", "--non-scripts" },
 		rojo_project_file = "default.project.json",
 		sourcemap_file = "sourcemap.json",
 	},
