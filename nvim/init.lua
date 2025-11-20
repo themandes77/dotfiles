@@ -1,5 +1,5 @@
 require("options")
-require("plugins")
+-- require("plugins")
+require("config.lazy")
 require("lsp")
 require("keybinds")
-require("treesitter")

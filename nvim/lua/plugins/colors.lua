@@ -1,9 +1,37 @@
-vim.pack.add({
-	{ src = "https://github.com/vague2k/vague.nvim" },
-	{ src = "https://github.com/bluz71/vim-moonfly-colors" },
-	{ src = "https://github.com/zenbones-theme/zenbones.nvim" },
-	{ src = "https://github.com/rktjmp/lush.nvim" },
-	{ src = "https://github.com/miikanissi/modus-themes.nvim" },
-})
-
-vim.cmd("colorscheme modus")
+return {
+	{
+		"miikanissi/modus-themes.nvim",
+	},
+	{
+		"projekt0n/github-nvim-theme",
+		config = function()
+			require("github-theme").setup({})
+		end,
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		config = function()
+			require("kanagawa").setup({
+				transparent = true,
+			})
+		end,
+	},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			require("catppuccin").setup({
+				float = {
+					transparent = false,
+					solid = false,
+				},
+				transparent_background = true,
+				integrations = {
+					notify = true,
+				},
+			})
+			vim.cmd("colorscheme catppuccin-mocha")
+		end,
+	},
+}

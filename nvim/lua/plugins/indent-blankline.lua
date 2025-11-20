@@ -1,12 +1,10 @@
-vim.pack.add({
-	{ src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
-})
-local highlight = {
-	"CursorColumn",
-	"Whitespace",
+return {
+	"lukas-reineke/indent-blankline.nvim",
+	main = "ibl",
+	---@module "ibl"
+	---@type ibl.config
+	opts = {},
+	config = function()
+		require("ibl").setup()
+	end,
 }
-require("ibl").setup({
-	scope = {
-		enabled = true,
-	},
-})

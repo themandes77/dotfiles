@@ -4,11 +4,12 @@ local flash = require("flash")
 local ls = require("luasnip")
 local obsidian = require("obsidian")
 local km = vim.keymap
+local mason = require("mason")
 
 -- neovim
 km.set("n", "<C-d>", "<C-d>zz")
 km.set("n", "<C-u>", "<C-u>zz")
-km.set("n", "<leader>lf", vim.lsp.buf.format)
+km.set("n", "<leader>lz", ":Lazy<CR>")
 -- oil
 km.set("n", "<leader>f", oil.open)
 -- fzf-lua
@@ -64,3 +65,6 @@ vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Find referen
 vim.keymap.set("n", "<leader>ch", function()
 	obsidian.util.toggle_checkbox()
 end, {})
+
+-- Mason --
+km.set("n", "<leader>M", ":Mason<CR>")
