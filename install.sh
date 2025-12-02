@@ -19,3 +19,6 @@ if [ ! -d "$HOME/.config/ohmyposh" ]; then
 else
 	printf "allready installed\n"
 fi
+
+
+printf "completed syslinks"

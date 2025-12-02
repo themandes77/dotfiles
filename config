@@ -43,41 +43,19 @@
 # custom-shader = ./shaders/retro-terminal.glsl
 # custom-shader-animation = always
 
-# theme = modus_vivendi
-font-family= BigBlueTerm437 Nerd Font Mono
-font-size= 19
-cursor-style = block
-shell-integration-features = no-cursor
-cursor-style-blink = false
+font-family= Iosevka Nerd Font
+font-size= 17
+# cursor-style = block_hollow
+# shell-integration-features = no-cursor
+cursor-style-blink = true
 link-url = true
 mouse-hide-while-typing = true
+title = "Ghostty"
 keybind=global:ctrl+shift+a=reload_config
 keybind = ctrl+enter=unbind
 mouse-hide-while-typing=true
-# window-decoration=false
+window-decoration=true
 confirm-close-surface=false
-
-# palette = 0=#000000
-# palette = 1=#55ff55
-# palette = 2=#00cc00
-# palette = 3=#00cc00
-# palette = 4=#005500
-# palette = 5=#55ff55
-# palette = 6=#00cc00
-# palette = 7=#00cc00
-# palette = 8=#000000
-# palette = 9=#55ff55
-# palette = 10=#55ff55
-# palette = 11=#55ff55
-# palette = 12=#005500
-# palette = 13=#55ff55
-# palette = 14=#55ff55
-# palette = 15=#00cc00
-#
-# background = #000000
-# foreground = #00cc00
-# cursor-color = #00cc00
-# cursor-text = #000000
-# selection-background = #55ff55
-# selection-foreground = #000000
-
+background-opacity = 0.9
+# background-blur = true
+theme = noctalia
