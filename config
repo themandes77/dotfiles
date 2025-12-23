@@ -39,23 +39,22 @@
 ##whichisexplainedinthedocsforthatconfigoption.
 ##Justforexample:
 #resize-overlay-duration=4s200ms
-# term=xterm-256color
+term=xterm-256color
 # custom-shader = ./shaders/retro-terminal.glsl
 # custom-shader-animation = always
 
-font-family= Iosevka Nerd Font
-font-size= 17
+font-family = DepartureMono Nerd Font
+font-size = 17
 # cursor-style = block_hollow
 # shell-integration-features = no-cursor
 cursor-style-blink = true
 link-url = true
-mouse-hide-while-typing = true
 title = "Ghostty"
 keybind=global:ctrl+shift+a=reload_config
 keybind = ctrl+enter=unbind
 mouse-hide-while-typing=true
 window-decoration=true
 confirm-close-surface=false
-background-opacity = 0.9
+# background-opacity = 0.9
 # background-blur = true
-theme = noctalia
+theme = Banana Blueberry

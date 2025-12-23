@@ -17,4 +17,4 @@ vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
 vim.opt.termguicolors = true
 vim.opt.mouse = ""
-
+vim.opt.guicursor = ""

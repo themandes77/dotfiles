@@ -1,6 +1,16 @@
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
-version = 3
+version = 4
 final_space = true
+
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = 'magenta'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '❯ '
+  background = 'transparent'
+  foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']
 
 [upgrade]
   source = 'cdn'
@@ -11,70 +21,40 @@ final_space = true
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
-	newline = true
+  newline = true
 
-	[[blocks.segments]]
-		type = 'path'
-		style = 'plain'
-		background = 'transparent'
-		foreground = '#4B95E9'
+  [[blocks.segments]]
+    foreground = '#4B95E9'
+    background = 'transparent'
+    type = 'path'
+    style = 'plain'
 
-		[blocks.segments.properties]
-			style = 'full'
-	
-	[[blocks.segments]]
-		type = 'git'
-		style = 'plain'
-		foreground = '#6c6c6c'
-		background = 'transparent'
-		template = '{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
-			
-			[blocks.segments.properties]
-				branch_icon =''
-				fetch_status = true
-				commit_icon = '@'
+  [[blocks.segments]]
+    template = '{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    foreground = '#6c6c6c'
+    background = 'transparent'
+    type = 'git'
+    style = 'plain'
 
 [[blocks]]
-	type = 'rprompt'
-	overflow = 'hidden'
+  type = 'rprompt'
+  overflow = 'hidden'
 
-	[[blocks.segments]]
-		type = 'executiontime'
-		style = 'plain'
-		foreground = 'yellow'
-		background = 'transparent'
-		template = '{{ div .Ms 1000 }}s'
-
-		[blocs.segments.properties]
-			threshold = 5000
-			style = ''
-
+  [[blocks.segments]]
+    template = '{{ div .Ms 1000 }}s'
+    foreground = 'yellow'
+    background = 'transparent'
+    type = 'executiontime'
+    style = 'plain'
 
 [[blocks]]
-	type = 'prompt'
-	newline = true
-	alignment = 'left'
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
 
-	[[blocks.segments]]
-		type = 'text'
-		style = 'plain'
-		foreground_templates = [
-			"{{if gt .Code 0}}red{{end}}",
-			"{{if eq .Code 0}}magenta{{end}}",
-		]
-		background = 'transparent'
-		template = '❯'
-
-[transient_prompt]
-  template = '❯ '
-	foreground_templates = [
-		"{{if gt .Code 0}}red{{end}}",
-		"{{if eq .Code 0}}magenta{{end}}",
-	]
-  background = 'transparent'
-
-[secondary_prompt]
-	foreground = 'magenta'
-	background = 'transparent'
-	template = '❯❯ '
-
+  [[blocks.segments]]
+    template = '❯'
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
+    foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']
