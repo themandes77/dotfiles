@@ -2,7 +2,6 @@ local oil = require("oil")
 local fzf = require("fzf-lua")
 local flash = require("flash")
 local ls = require("luasnip")
-local obsidian = require("obsidian")
 local km = vim.keymap
 local mason = require("mason")
 
@@ -60,11 +59,5 @@ vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to defini
 vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Find references" })
-
--- Obsidian --
-vim.keymap.set("n", "<leader>ch", function()
-	obsidian.util.toggle_checkbox()
-end, {})
-
 -- Mason --
 km.set("n", "<leader>M", ":Mason<CR>")

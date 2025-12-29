@@ -3,6 +3,12 @@ return {
 		"miikanissi/modus-themes.nvim",
 	},
 	{
+		"tiagovla/tokyodark.nvim",
+		config = function()
+			vim.cmd("colorscheme tokyodark")
+		end,
+	},
+	{
 		"projekt0n/github-nvim-theme",
 		config = function()
 			require("github-theme").setup({})
@@ -31,7 +37,6 @@ return {
 					notify = true,
 				},
 			})
-			vim.cmd("colorscheme catppuccin-mocha")
 		end,
 	},
 }

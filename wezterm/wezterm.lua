@@ -1,7 +1,9 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
+local tokyodark = require("themes.tokyodark")
 
-config.color_scheme = "Ciapre"
+config.colors = tokyodark
+
 config.enable_tab_bar = false
 config.window_close_confirmation = "NeverPrompt"
 config.skip_close_confirmation_for_processes_named = { "bash", "sh", "zsh", "fish", "tmux" }

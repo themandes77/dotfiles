@@ -14,7 +14,6 @@ return {
 					filetypes = { "css", "scss", "html", "javascript", "typescript", "json" },
 				}),
 				null_ls.builtins.formatting.clang_format,
-				null_ls.builtins.diagnostics.shellcheck,
 			},
 			on_attach = function(client, bufnr)
 				if client:supports_method("textDocument/formatting") then
