@@ -7,6 +7,9 @@ config.colors = tokyodark
 config.enable_tab_bar = false
 config.window_close_confirmation = "NeverPrompt"
 config.skip_close_confirmation_for_processes_named = { "bash", "sh", "zsh", "fish", "tmux" }
+config.default_cursor_style = "SteadyUnderline"
+config.cursor_thickness = "3px"
+config.front_end = "OpenGL"
 config.keys = {
 	{
 		key = "w",

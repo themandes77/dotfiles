@@ -8,11 +8,12 @@ local mason = require("mason")
 -- neovim
 km.set("n", "<C-d>", "<C-d>zz")
 km.set("n", "<C-u>", "<C-u>zz")
-km.set("n", "<leader>lz", ":Lazy<CR>")
+km.set("n", "<leader>lz", "<cmd>Lazy<CR>")
 -- oil
 km.set("n", "<leader>f", oil.open)
 -- fzf-lua
 km.set("n", ";f", fzf.files)
+km.set("n", ";w", "<cmd>FzfLua files cwd=~/vimwiki/<CR>")
 km.set("n", "\\\\", fzf.buffers)
 km.set("n", ";e", fzf.diagnostics_document)
 km.set("n", ";s", fzf.live_grep)
@@ -60,4 +61,7 @@ vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { desc = "Go to decla
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Find references" })
 -- Mason --
-km.set("n", "<leader>M", ":Mason<CR>")
+km.set("n", "<leader>M", "<cmd>Mason<CR>")
+-- Dashboard --
+km.set("n", "<leader>L", "<cmd>Dashboard<CR>")
+-- Open vimwiki --

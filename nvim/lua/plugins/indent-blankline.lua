@@ -3,8 +3,14 @@ return {
 	main = "ibl",
 	---@module "ibl"
 	---@type ibl.config
-	opts = {},
 	config = function()
-		require("ibl").setup()
+		local opts = {
+			exclude = {
+				filetypes = {
+					"dashboard",
+				},
+			},
+		}
+		require("ibl").setup(opts)
 	end,
 }
