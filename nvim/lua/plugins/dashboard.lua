@@ -53,7 +53,7 @@ return {
 						key = "g",
 					},
 					{
-						action = "lua FzfLua.files({cwd = '/home/mandes/vimwiki'})",
+						action = "lua FzfLua.files({cwd = '~/NextCloud/Vimwiki'})",
 						desc = " Wiki",
 						icon = " ",
 						key = "w",

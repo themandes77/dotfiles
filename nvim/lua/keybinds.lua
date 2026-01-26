@@ -13,7 +13,7 @@ km.set("n", "<leader>lz", "<cmd>Lazy<CR>")
 km.set("n", "<leader>f", oil.open)
 -- fzf-lua
 km.set("n", ";f", fzf.files)
-km.set("n", ";w", "<cmd>FzfLua files cwd=~/vimwiki/<CR>")
+km.set("n", ";w", "<cmd>FzfLua files cwd=~/NextCloud/Vimwiki/<CR>")
 km.set("n", "\\\\", fzf.buffers)
 km.set("n", ";e", fzf.diagnostics_document)
 km.set("n", ";s", fzf.live_grep)
@@ -64,4 +64,3 @@ vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Find referen
 km.set("n", "<leader>M", "<cmd>Mason<CR>")
 -- Dashboard --
 km.set("n", "<leader>L", "<cmd>Dashboard<CR>")
--- Open vimwiki --

@@ -4,6 +4,7 @@ return {
 		vim.g.vimwiki_list = {
 			{
 				syntax = "markdown",
+				path = "~/NextCloud/Vimwiki",
 				ext = ".md",
 			},
 		}

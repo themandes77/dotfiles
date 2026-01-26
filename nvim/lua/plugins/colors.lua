@@ -4,9 +4,6 @@ return {
 	},
 	{
 		"tiagovla/tokyodark.nvim",
-		config = function()
-			vim.cmd("colorscheme tokyodark")
-		end,
 	},
 	{
 		"projekt0n/github-nvim-theme",
@@ -37,6 +34,16 @@ return {
 					notify = true,
 				},
 			})
+		end,
+	},
+	{
+		"Mofiqul/dracula.nvim",
+		config = function()
+			local dracula = require("dracula")
+			dracula.setup({
+				transparent_bg = true,
+			})
+			vim.cmd("colorscheme dracula")
 		end,
 	},
 }
