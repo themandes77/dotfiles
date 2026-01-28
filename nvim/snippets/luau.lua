@@ -9,22 +9,39 @@ local fmt = require("luasnip.extras.fmt").fmt
 return {
 
 	s("fun", {
-		t("function "), i(1, "name"), t("("), i(2), t({ ")", "\t" }), i(3, "-- body"), t({ "", "end" })
+		t("function "),
+		t("("),
+		i(1),
+		t({ ")", "\t" }),
+		i(2, "-- body"),
+		t({ "", "end" }),
 	}),
 
-	s("do", fmt([[
+	s(
+		"do",
+		fmt(
+			[[
     do
       {}
     end
-  ]], {
-		i(1, "-- body"),
-	})),
+  ]],
+			{
+				i(1, "-- body"),
+			}
+		)
+	),
 
-	s("then", fmt([[
+	s(
+		"then",
+		fmt(
+			[[
     then
       {}
     end
-  ]], {
-		i(1, "-- body"),
-	})),
+  ]],
+			{
+				i(1, "-- body"),
+			}
+		)
+	),
 }

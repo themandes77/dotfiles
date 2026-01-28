@@ -64,3 +64,10 @@ vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Find referen
 km.set("n", "<leader>M", "<cmd>Mason<CR>")
 -- Dashboard --
 km.set("n", "<leader>L", "<cmd>Dashboard<CR>")
+-- Close buffer --
+km.set("n", "<leader>cb", "<cmd>bd<CR>")
+-- Toggle Stay centered --
+km.set({ "n", "v" }, "<leader>st", function()
+	local staycentered = require("stay-centered")
+	staycentered.toggle()
+end)
