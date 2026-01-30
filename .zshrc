@@ -22,12 +22,13 @@ echo "
 ⠀⠀⠀⠀⠀⠀⠀⣿⣿⠏⠀⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 "
-# test
+
 alias ls="eza -lF -a --icons"
 alias vi="nvim"
 alias fman="compgen -c | fzf | xargs man"
 alias cd="z"
-# alias fzv="nvim $(fzf --preview bat --style=numbers --color=always {})"
+alias cdwm="vi ~/dwm-btw/config.h"
+alias mdwm="cd ~/dwm-btw; sudo make clean install; cd -"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
