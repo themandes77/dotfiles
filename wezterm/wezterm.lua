@@ -9,7 +9,7 @@ config.window_close_confirmation = "NeverPrompt"
 config.skip_close_confirmation_for_processes_named = { "bash", "sh", "zsh", "fish", "tmux" }
 config.default_cursor_style = "BlinkingUnderline"
 config.cursor_thickness = "3px"
-config.cursor_blink_rate = 400
+config.cursor_blink_rate = 250
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 
