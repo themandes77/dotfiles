@@ -44,13 +44,14 @@ term=xterm-256color
 # custom-shader-animation = always
 
 font-family = DepartureMono Nerd Font
-font-size = 17
+font-size = 15
 # cursor-style = block_hollow
 # shell-integration-features = no-cursor
 cursor-style-blink = true
 link-url = true
 title = "Ghostty"
 keybind=global:ctrl+shift+a=reload_config
+bell-features = system
 keybind = ctrl+enter=unbind
 mouse-hide-while-typing=true
 window-decoration=true

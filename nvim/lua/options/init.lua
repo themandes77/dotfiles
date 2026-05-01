@@ -1,5 +1,6 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.autochdir = true
 vim.opt.wrap = true
 -- vim.opt.textwidth = 100
 vim.opt.tabstop = 2
@@ -11,10 +12,6 @@ vim.g.mapleader = " "
 vim.opt.winborder = "rounded"
 vim.opt.colorcolumn = "100"
 vim.opt.hlsearch = false
-vim.opt.foldcolumn = "1"
-vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 99
-vim.opt.foldenable = true
 vim.opt.termguicolors = true
 vim.opt.mouse = ""
 vim.opt.conceallevel = 0

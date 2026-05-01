@@ -55,8 +55,14 @@ return {
 					{
 						action = "lua FzfLua.files({cwd = '~/NextCloud/Vimwiki'})",
 						desc = " Wiki",
-						icon = " ",
+						icon = "🕮 ",
 						key = "w",
+					},
+					{
+						action = "lua FzfLua.files({cwd = '~/dotfiles/nvim'})",
+						desc = " Config Files",
+						icon = " ",
+						key = "c",
 					},
 					{
 						action = "Lazy",

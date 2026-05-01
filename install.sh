@@ -12,6 +12,14 @@ else
 	printf "wezterm config folder found... \n"
 fi
 
+if [ ! -d "$HOME/.config/ghostty" ]; then
+	printf "Ghostty config folder not found, creating symlink\n"
+	ln -s "$(pwd)/ghostty" "$HOME/.config/ghostty"
+	printf "done\n"
+else
+	printf "wezterm config folder found... \n"
+fi
+
 if [ ! -d "$HOME/.config/nvim" ]; then
 	printf "nvim folder not found, making symlink\n"
 	ln -s "$(pwd)/nvim" "$HOME/.config/nvim"

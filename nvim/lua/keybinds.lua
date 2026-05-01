@@ -12,11 +12,14 @@ km.set("n", "<leader>lz", "<cmd>Lazy<CR>")
 -- oil
 km.set("n", "<leader>f", oil.open)
 -- fzf-lua
-km.set("n", ";f", fzf.files)
+km.set("n", ";f", function()
+	fzf.files({ cwd = vim.fn.getcwd() })
+end, { desc = "find files" })
 km.set("n", ";w", "<cmd>FzfLua files cwd=~/NextCloud/Vimwiki/<CR>")
 km.set("n", "\\\\", fzf.buffers)
 km.set("n", ";e", fzf.diagnostics_document)
 km.set("n", ";s", fzf.live_grep)
+km.set("n", ";vh", fzf.helptags, { desc = "Search help APIs" })
 -- obsidian
 km.set("n", ";o", function()
 	fzf.files({ cwd = "/home/mandes/Notes" })
@@ -47,14 +50,14 @@ km.set({ "n", "x", "o" }, "<c-s>", function()
 	flash.toggle()
 end, { desc = "flash toggle", silent = true })
 -- UFO.nvim --
-km.set("n", "zR", require("ufo").openAllFolds, {})
-km.set("n", "zM", require("ufo").closeAllFolds, {})
+km.set("n", "zR", require("ufo").openAllFolds, { desc = "Open All Folds" })
+km.set("n", "zM", require("ufo").closeAllFolds, { desc = "Close All Folds" })
 km.set("n", "zK", function()
 	local winid = require("ufo").peekFoldedLinesUnderCursor()
 	if not winid then
 		vim.lsp.buf.hover()
 	end
-end, {})
+end, { desc = "Peek Folded Lines under Cursor" })
 
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })

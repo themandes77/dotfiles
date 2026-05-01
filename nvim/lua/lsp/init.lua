@@ -1,23 +1,3 @@
-vim.lsp.enable({ "lua_ls", "clangd" })
-
--- vim.api.nvim_create_autocmd("LspAttach", {
--- 	callback = function(ev)
--- 		local client = vim.lsp.get_client_by_id(ev.data.client_id)
---
--- 		if not client:supports_method('textDocument/willSaveWaitUntil')
--- 				and client:supports_method('textDocument/formatting') then
--- 			vim.api.nvim_create_autocmd('BufWritePre', {
--- 				group = vim.api.nvim_create_augroup('my.lsp', { clear = false }),
--- 				buffer = ev.buf,
--- 				callback = function()
--- 					vim.lsp.buf.format({ bufnr = ev.buf, id = client.id, timeout_ms = 1000 })
--- 				end,
--- 			})
--- 		end
--- 	end
--- })
--- vim.cmd("set completeopt+=noselect")
-
 -- luau lsp
 require("luau-lsp").setup({
 	platform = {
@@ -76,3 +56,5 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.config("rust_analyzer", {})
+
+vim.lsp.enable({ "lua_ls", "clangd" })

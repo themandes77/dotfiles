@@ -44,4 +44,15 @@ return {
 			}
 		)
 	),
+	s(
+		"pack",
+		fmt(
+			[[
+				{ src = "https://github.com/{}"}
+			]],
+			{
+				i(1, "-- package"),
+			}
+		)
+	),
 }
