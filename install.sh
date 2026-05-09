@@ -12,6 +12,14 @@ else
 	printf "wezterm config folder found... \n"
 fi
 
+if [ ! -d "$HOME/.config/tmux"]; then
+	printf "tmux config folder not found, creating symlink\n"
+	ln -s "$(pwd)/tmux" "$HOME/.config/wezterm"
+	printf "done\n"
+else
+	printf "tmux config folder found... \n"
+fi
+
 if [ ! -d "$HOME/.config/ghostty" ]; then
 	printf "Ghostty config folder not found, creating symlink\n"
 	ln -s "$(pwd)/ghostty" "$HOME/.config/ghostty"

@@ -19,9 +19,13 @@ vim.api.nvim_create_autocmd("PackChanged", {
 })
 
 vim.pack.add({
+	-- { src = "https://github.com/akinsho/bufferline.nvim" }, -- bufferline
 
 	-- none-ls
 	{ src = "https://github.com/nvimtools/none-ls.nvim" },
+
+	-- yazi-nvim
+	{ src = "https://github.com/mikavilpas/yazi.nvim" },
 
 	-- Mason
 	{ src = "https://github.com/mason-org/mason.nvim" },
@@ -43,7 +47,7 @@ vim.pack.add({
 	{ src = "https://github.com/ibhagwan/fzf-lua" },
 
 	-- oil.nvim
-	{ src = "https://github.com/stevearc/oil.nvim" },
+	-- { src = "https://github.com/stevearc/oil.nvim" },
 
 	-- lsp-config
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
@@ -66,7 +70,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvimdev/dashboard-nvim" },
 
 	-- luasnip
-	{ src = "https://github.com/L3MON4D3/LuaSnip", version = "v2.*" },
+	{ src = "https://github.com/L3MON4D3/LuaSnip" },
 
 	-- treesitter
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
@@ -138,12 +142,17 @@ vim.cmd("colorscheme dracula") -- colorscheme
 
 require("plugins.autopairs") -- autopairs
 require("plugins.lualine") -- lualine
-require("plugins.oil") -- oil
 require("plugins.nonels") -- nonels
 -- lsp stuff --
 require("plugins.mason") -- mason
 require("lsp") -- lsp
 require("plugins.luasnip") -- luasnip
-
-require("plugins.nvim-ufo") -- nvim-ufo
 require("plugins.blink-cmp") -- blink-cmp
+-- stuff idk --
+require("plugins.nvim-ufo") -- nvim-ufo
+require("plugins.dashboard") -- dashboard-nvim
+require("plugins.vimwiki") -- vimwiki
+-- file management --
+require("plugins.fzf-lua") -- fzf-lua
+require("plugins.yazi") -- yazi
+-- require("plugins.bufferline") -- buferline

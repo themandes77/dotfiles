@@ -32,7 +32,7 @@ config.keys = {
 }
 
 config.font = wezterm.font("DepartureMono Nerd Font")
-config.font_size = 17
+config.font_size = 14
 
 config.tab_and_split_indices_are_zero_based = false
 

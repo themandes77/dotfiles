@@ -1,0 +1,53 @@
+local fzf_previewer_builtin = require("fzf-lua.previewer.builtin")
+
+local state = require("plugins.fzf-lua.state")
+local utils = require("plugins.fzf-lua.utils")
+
+local M = fzf_previewer_builtin.buffer_or_file:extend()
+
+function M:new(o, opts, fzf_win)
+	M.super.new(self, o, opts, fzf_win)
+	setmetatable(self, M)
+	return self
+end
+
+function M:populate_preview_buf(entry)
+	local key = entry[1]
+	if key == "../" then
+		local parent = vim.fn.fnamemodify(state.cwd, ":h")
+		if parent and parent ~= state.cwd then
+			local items = utils.get_items(parent)
+			local lines = {}
+			for _, item in ipairs(items) do
+				table.insert(lines, item.key)
+			end
+			local buf = self:get_tmp_buffer()
+			vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
+			self:set_preview_buf(buf)
+			self.win:update_preview_title(string.format(" %s ", ".."))
+		end
+		return
+	end
+	local file = state.files[key]
+	if not file then
+		return
+	end
+	if not file.is_dir then
+		self.super.populate_preview_buf(self, file.path)
+		return
+	end
+	local items = utils.get_items(file.path)
+	local lines = {}
+	for _, item in ipairs(items) do
+		table.insert(lines, item.key)
+	end
+	local buf = self:get_tmp_buffer()
+	vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
+	self:set_preview_buf(buf)
+	self.win:update_preview_title(string.format(" %s ", file.name))
+	self:preview_buf_post({
+		path = file.path,
+	})
+end
+
+return M

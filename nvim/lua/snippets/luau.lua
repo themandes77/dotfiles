@@ -48,7 +48,7 @@ return {
 		"pack",
 		fmt(
 			[[
-				{ src = "https://github.com/{}"}
+				{{ src = "https://github.com/{}"}}
 			]],
 			{
 				i(1, "-- package"),

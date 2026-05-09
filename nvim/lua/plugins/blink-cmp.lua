@@ -1,4 +1,4 @@
--- require("blink.cmp").build():wait(60000)
+require("blink.cmp").build():wait(60000)
 
 ---@module "blink.cmp"
 ---@type blink.cmp.Config

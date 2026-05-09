@@ -1,3 +1,6 @@
+local buffline = require("bufferline")
+buffline.setup({})
+
 return {
 	"akinsho/bufferline.nvim",
 	version = "*",

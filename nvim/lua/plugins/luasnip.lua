@@ -1,5 +1,9 @@
-require("luasnip.loaders.from_lua").lazy_load({
-	paths = vim.fn.stdpath("config") .. "/snippets",
+require("luasnip.loaders.from_lua").load({
+	paths = vim.fn.stdpath("config") .. "/lua/snippets",
+})
+
+require("luasnip.loaders.from_vscode").load({
+	paths = { vim.fn.stdpath("data") .. "/site/pack/core/opt/friendly-snippets" },
 })
 
 -- return {

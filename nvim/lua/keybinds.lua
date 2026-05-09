@@ -1,29 +1,15 @@
-local oil = require("oil")
-local fzf = require("fzf-lua")
 local flash = require("flash")
 local ls = require("luasnip")
 local km = vim.keymap
-local mason = require("mason")
+local yazi = require("yazi")
+-- local mason = require("mason")
 
 -- neovim
 km.set("n", "<C-d>", "<C-d>zz")
 km.set("n", "<C-u>", "<C-u>zz")
 km.set("n", "<leader>lz", "<cmd>Lazy<CR>")
--- oil
-km.set("n", "<leader>f", oil.open)
--- fzf-lua
-km.set("n", ";f", function()
-	fzf.files({ cwd = vim.fn.getcwd() })
-end, { desc = "find files" })
-km.set("n", ";w", "<cmd>FzfLua files cwd=~/NextCloud/Vimwiki/<CR>")
-km.set("n", "\\\\", fzf.buffers)
-km.set("n", ";e", fzf.diagnostics_document)
-km.set("n", ";s", fzf.live_grep)
-km.set("n", ";vh", fzf.helptags, { desc = "Search help APIs" })
--- obsidian
-km.set("n", ";o", function()
-	fzf.files({ cwd = "/home/mandes/Notes" })
-end, { desc = "open obsidian vault" })
+-- yazi
+km.set("n", "<leader>f", yazi.yazi)
 -- luasnip
 km.set({ "i" }, "<c-k>", function()
 	ls.expand()
