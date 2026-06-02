@@ -1,23 +1,16 @@
-require("luasnip.loaders.from_lua").load({
-	paths = vim.fn.stdpath("config") .. "/lua/snippets",
-})
+local luasnip = require("luasnip")
 
-require("luasnip.loaders.from_vscode").load({
-	paths = { vim.fn.stdpath("data") .. "/site/pack/core/opt/friendly-snippets" },
-})
+require("luasnip.loaders.from_snipmate").lazy_load()
 
--- return {
--- 	"L3MON4D3/LuaSnip",
--- 	-- follow latest release.
--- 	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
--- 	-- install jsregexp (optional!).
--- 	build = "make install_jsregexp",
--- 	dependencies = {
--- 		"rafamadriz/friendly-snippets",
--- 	},
--- 	config = function()
--- 		require("luasnip.loaders.from_lua").lazy_load({
--- 			paths = vim.fn.stdpath("config") .. "/snippets",
--- 		})
--- 	end,
--- }
+luasnip.setup({})
+
+vim.keymap.set({"i"}, "<C-K>", function() luasnip.expand() end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-L>", function() luasnip.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-J>", function() luasnip.jump(-1) end, {silent = true})
+
+vim.keymap.set({"i", "s"}, "<C-E>", function()
+	if luasnip.choice_active() then
+		luasnip.change_choice(1)
+	end
+end, {silent = true})
+

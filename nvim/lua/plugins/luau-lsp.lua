@@ -1,28 +1,17 @@
-local function rojo_project()
-	return vim.fs.root(0, function(name)
-		return name:match(".+%.project%.json$")
-	end)
-end
-
-return {
-	"lopi-py/luau-lsp.nvim",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-	},
-	config = function()
-		require("luau-lsp").setup({
-			platform = {
-				type = rojo_project() and "roblox" or "standard",
-			},
-			sourcemap = {
-				enabled = true,
-				autogenerate = true,
-				rojo_project_file = "default.project.json",
-				sourcemap_file = "sourcemap.json",
-			},
-			plugin = {
-				enabled = true,
-			},
-		})
-	end,
-}
+local luau_lsp = require("luau-lsp")
+luau_lsp.setup({
+    platform = {
+        type = "roblox",
+    },
+    types = {
+        roblox_security_level = "PluginSecurity",
+    },
+    sourcemap = {
+        -- based on https://argon.wiki/docs/commands/cli#sourcemap
+        generator_cmd = { "argon", "sourcemap", "--watch", "--non-scripts" },
+    },
+    plugin = {
+        enabled = true,
+        port = 3667,
+    },
+})
