@@ -1,0 +1,1 @@
+/home/mandes/.config/emacs/elpaca/sources/eshell-syntax-highlighting/eshell-syntax-highlighting.el

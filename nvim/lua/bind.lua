@@ -8,6 +8,12 @@ km.set("n", "gl", vim.diagnostic.open_float, {desc = "Open diagnostics"})
 km.set("n", "<leader>bp", "<cmd> bprevious <CR>", {desc = "Previous buffer"})
 km.set("n", "<leader>bn", "<cmd> bnext <CR>", {desc = "Next buffer"})
 km.set("n", "<leader>bq", "<cmd> bdelete! <CR>", {desc = "Delete buffer"})
+
+km.set("n", "<C-l>", "<C-w>l", {desc = "jump to left split"})
+km.set("n", "<C-h>", "<C-w>h", {desc = "jump to right split"})
+km.set("n", "<C-j>", "<C-w>j", {desc = "jump to down split"})
+km.set("n", "<C-k>", "<C-w>k", {desc = "jump to up split"})
+
 km.set("n", "<leader>ca", function ()
   vim.lsp.buf.code_action()
 end, { desc = "Open code actions" })

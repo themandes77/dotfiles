@@ -1,0 +1,21 @@
+(defcfg
+  process-unmapped-keys yes
+  log-layer-changes yes
+  )
+
+(defsrc
+  caps
+  lshift
+  a
+  s
+  )
+
+(defalias
+  bks-fn (tap-hold 150 200 bks esc)
+  lshift-ret(tap-hold 150 200 ret lshift)
+  a(tap-hold 150 200 a lalt)
+  s(tap-hold 150 200 s lshift)
+  )
+
+
+(deflayer base @bks-fn @lshift-ret @a @s)

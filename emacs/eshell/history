@@ -1,0 +1,22 @@
+y
+cd
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+opencode
+clear
+man git
+dnf search raylib
+sudo dnf install raylib raylib-devel
+sudo dnf update -y
+sudo dnf install raylib raylib-devel
+clear
+ git clone https://github.com/dracula/qutebrowser-dracula-theme.git dracula 
+cear
+clear
+ls

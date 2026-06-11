@@ -1,0 +1,1 @@
+/home/mandes/.config/emacs/elpaca/sources/evil-tutor/evil-tutor.el

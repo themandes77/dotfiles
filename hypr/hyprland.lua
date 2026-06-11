@@ -1,0 +1,58 @@
+require("modules.binds")
+require("modules.monitors")
+require("modules.theme")
+
+-- Autorun
+hl.on("hyprland.start", function()
+  hl.exec_cmd("steam")
+  hl.exec_cmd("qs -p ~/dotfiles/qs/bar.qml")
+  hl.exec_cmd("qs -p ~/dotfiles/qs/volume.qml")
+  hl.exec_cmd("flatpak run com.spotify.Client")
+  hl.exec_cmd("hyprpaper")
+  hl.exec_cmd("flatpak run dev.vencord.Vesktop")
+  hl.exec_cmd("swaybg -i ~/dotfiles/wallpapers/skyrim1.jpg")
+end)
+
+hl.config({
+  general = {
+    gaps_in = 8,
+    gaps_out = 10,
+    border_size = 2,
+
+    col = {
+      active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
+      inactive_border = "rgba(595959aa)",
+    },
+  },
+  input = {
+    kb_layout = "us, latam",
+    kb_variant = "",
+    kb_options = "grp:alt_shift_toggle",
+    repeat_rate = 50,
+    repeat_delay = 250,
+
+    follow_mouse = 1,
+
+    sensitivity = 0,
+  },
+  decoration = {
+    rounding_power = 2,
+    active_opacity = 1.0,
+    inactive_opacity = 0.95,
+    shadow = {
+      enabled = true,
+      range = 4,
+      render_power = 3,
+      color = 0xee1a1a1a,
+    },
+    blur = {
+      enabled = true,
+      size = 3,
+      passes = 2,
+      vibrancy = 0.1696,
+    },
+  },
+  animations = {
+    enabled = false,
+  },
+})

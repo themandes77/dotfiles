@@ -18,6 +18,7 @@ vim.opt.softtabstop = 4
 
 vim.opt.hlsearch = false
 vim.opt.conceallevel = 0
+vim.opt.autochdir = true
 
 if vim.g.neovide then
 	vim.print(vim.g.neovide_version)

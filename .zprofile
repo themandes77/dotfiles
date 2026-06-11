@@ -6,4 +6,3 @@ alias cdwm="vi ~/dwm-btw/config.h"
 alias mdwm="cd ~/dwm-btw; sudo make clean install; cd -"
 alias y="yazi"
 export PATH=~/bin:$PATH
-alias tar="tar -xvzf"

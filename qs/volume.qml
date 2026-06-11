@@ -7,6 +7,15 @@ import Quickshell.Widgets
 Scope {
 	id: root
 
+	property color colBg: "#1a1b26"
+	property color colFg: "#a9b1d6"
+	property color colMuted: "#444b6a"
+	property color colCyan: "#0db9d7"
+	property color colBlue: "#7aa2f7"
+	property color colYellow: "#e0af68"
+	property string fontFamily: "JetBrainsMono Nerd Font"
+	property int fontSize: 16
+
 	// Bind the pipewire node so its volume will be tracked
 	PwObjectTracker {
 		objects: [ Pipewire.defaultAudioSink ]
@@ -39,6 +48,8 @@ Scope {
 			// Since the panel's screen is unset, it will be picked by the compositor
 			// when the window is created. Most compositors pick the current active monitor.
 
+			property var volume: Math.round(Pipewire.defaultAudioSink.audio.volume * 100)
+
 			anchors.bottom: true
 			margins.bottom: screen.height / 5
 			exclusiveZone: 0
@@ -46,7 +57,6 @@ Scope {
 			implicitWidth: 400
 			implicitHeight: 50
 			color: "transparent"
-
 			// An empty click mask prevents the window from blocking mouse events.
 			mask: Region {}
 
@@ -62,10 +72,12 @@ Scope {
 						rightMargin: 15
 					}
 
-					IconImage {
-						implicitSize: 30
-						source: "/usr/share/icons/breeze-dark/actions/22/audio-symbolic.svg"
+					Text {
+						color: "#ffffffff"
+						font { family: root.fontFamily; pixelSize: 18; bold: false }
+						text: ""
 					}
+
 
 					Rectangle {
 						// Stretches to fill all left-over space
@@ -85,6 +97,13 @@ Scope {
 							implicitWidth: parent.width * (Pipewire.defaultAudioSink?.audio.volume ?? 0)
 							radius: parent.radius
 						}
+					}
+
+					Text {
+						id: volPerc
+						color: "#ffffffff"
+						font { family: root.fontFamily; pixelSize: root.fontSize; bold: false }
+						text:  volume + "%"
 					}
 				}
 			}

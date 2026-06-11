@@ -1,0 +1,6 @@
+[lua]
+version = "lua52"
+[features]
+require = true
+[globals]
+hl = { type = "table" }

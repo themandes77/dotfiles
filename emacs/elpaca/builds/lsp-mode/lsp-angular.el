@@ -1,0 +1,1 @@
+/home/mandes/.config/emacs/elpaca/sources/lsp-mode/clients/lsp-angular.el

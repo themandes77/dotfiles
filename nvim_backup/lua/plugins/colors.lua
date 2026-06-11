@@ -1,47 +1,49 @@
-function ColorMyPencils(color)
-	color = color or "rose-pine"
-	vim.cmd.colorscheme(color)
-end
-
 return {
 	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		opts = {},
+		"miikanissi/modus-themes.nvim",
+	},
+	{
+		"tiagovla/tokyodark.nvim",
+	},
+	{
+		"projekt0n/github-nvim-theme",
 		config = function()
-			ColorMyPencils()
+			require("github-theme").setup({})
 		end,
 	},
-
+	{
+		"rebelot/kanagawa.nvim",
+		config = function()
+			require("kanagawa").setup({
+				transparent = true,
+			})
+		end,
+	},
 	{
 		"catppuccin/nvim",
-		lazy = false,
-		opts = {},
-		config = function()
-			ColorMyPencils()
-		end,
-	},
-
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		config = function()
-			require("rose-pine").setup({
-				styles = {
-					bold = true,
-					italic = false,
-					transparency = true,
-				},
-			})
-
-			ColorMyPencils()
-		end,
-	},
-	{
-		"olimorris/onedarkpro.nvim",
+		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			ColorMyPencils()
+			require("catppuccin").setup({
+				float = {
+					transparent = false,
+					solid = false,
+				},
+				transparent_background = true,
+				integrations = {
+					notify = true,
+				},
+			})
+		end,
+	},
+	{
+		"Mofiqul/dracula.nvim",
+		config = function()
+			local dracula = require("dracula")
+			dracula.setup({
+				transparent_bg = true,
+			})
+			vim.cmd("colorscheme dracula")
 		end,
 	},
 }

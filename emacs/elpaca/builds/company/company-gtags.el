@@ -1,0 +1,1 @@
+/home/mandes/.config/emacs/elpaca/sources/company-mode/company-gtags.el

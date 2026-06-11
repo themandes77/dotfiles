@@ -23,12 +23,15 @@ vim.pack.add({
     {src = "https://github.com/lopi-py/luau-lsp.nvim"}, --luau-lsp
     {src = "https://github.com/preservim/nerdtree"}, -- nerdtree
     {src = "https://github.com/lukas-reineke/indent-blankline.nvim"}, -- indent blankline
-    {src = "https://github.com/sainnhe/gruvbox-material"},
+    {src = "https://github.com/sainnhe/gruvbox-material"}, -- gruvbox material
+    {src = "https://github.com/nvim-telescope/telescope.nvim"}, -- telescope
+    {src = "https://github.com/nvim-telescope/telescope-file-browser.nvim"}, -- telescope filebrowser
+    {src = "https://github.com/nvimtools/none-ls.nvim"} -- none-ls
 })
 
 require("plugins.autopairs") -- autopairs
 require("plugins.blink-cmp") -- blink-cmp
-require("plugins.oil") -- oil-nvim
+-- require("plugins.oil") -- oil-nvim
 require("plugins.luasnip") -- luasnip
 require("plugins.wikivim") -- wikivim
 require("plugins.render-markdown") -- render-markdown
@@ -37,9 +40,13 @@ require("plugins.mason") -- mason
 require("plugins.fidget") -- fidget
 require("plugins.ibuff") -- ibuff
 require("plugins.nvim-ufo") -- nvim-ufo
-require("plugins.lualine")
-require("plugins.luau-lsp")
-require("plugins.nerdtree")
-require("plugins.ibl")
+require("plugins.lualine")  -- lualine
+require("plugins.luau-lsp") -- luau-lsp
+require("plugins.nerdtree") -- nerdtree
+require("plugins.ibl")  -- ibl
+require("plugins.telescope") -- telescope
+require("plugins.nonels") -- nonels
 
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("gruvbox-material")
+vim.g.gruvbox_material_foreground = "original"
+vim.g.gruvbox_material_bacgkround = "hard"

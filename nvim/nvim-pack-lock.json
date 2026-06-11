@@ -13,6 +13,10 @@
       "rev": "82404b196e73a00b1727a91903beef5ddc319d22",
       "src": "https://github.com/j-hui/fidget.nvim"
     },
+    "gruvbox-material": {
+      "rev": "11d779b26a9ab2b3db8c22c6ac9fb6e8ed4fea79",
+      "src": "https://github.com/sainnhe/gruvbox-material"
+    },
     "gruvbox.nvim": {
       "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
       "src": "https://github.com/ellisonleao/gruvbox.nvim"
@@ -40,6 +44,10 @@
     "nerdtree": {
       "rev": "690d061b591525890f1471c6675bcb5bdc8cdff9",
       "src": "https://github.com/preservim/nerdtree"
+    },
+    "none-ls.nvim": {
+      "rev": "01f8e62ea11603e59ad9ff7afcfa94fd183f76d6",
+      "src": "https://github.com/nvimtools/none-ls.nvim"
     },
     "nvim": {
       "rev": "0303a7208dba448c459767486a38a6ec05c4216b",
@@ -84,6 +92,14 @@
     "render-markdown.nvim": {
       "rev": "5adf0895310c1904e5abfaad40a2baad7fe44a07",
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+    },
+    "telescope-file-browser.nvim": {
+      "rev": "3610dc7dc91f06aa98b11dca5cc30dfa98626b7e",
+      "src": "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+    },
+    "telescope.nvim": {
+      "rev": "7d324792b7943e4aa16ad007212e6acc6f9fe335",
+      "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
     "terracotta.nvim": {
       "rev": "b3ebaedc6546c33cebc3910d3aa4963c09a8bc8b",

@@ -1,0 +1,1 @@
+#s(lsp-session ("/home/mandes/.config/qutebrowser" "/home/mandes/Projects/RaySnake" "/home/mandes/dotfiles") nil #s(hash-table test equal) #s(hash-table test equal) #s(hash-table test equal))

@@ -1,0 +1,1 @@
+/home/mandes/.config/emacs/elpaca/sources/base16-emacs/build/base16-0x96f-theme.el

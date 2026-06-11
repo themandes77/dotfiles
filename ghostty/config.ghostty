@@ -1,0 +1,8 @@
+confirm-close-surface=false
+font-family = TerminessNerdFont Mono
+font-size = 17
+term=xterm-256color
+keybind = ctrl+enter=unbind
+keybind=global:ctrl+shift+a=reload_config
+theme=Gruvbox Material Dark
+

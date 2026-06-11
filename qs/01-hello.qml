@@ -141,7 +141,7 @@ PanelWindow {
 			}
 		}
 
-		Rectangle { width: 1; height: 16; color: root.colMuted }
+		rectangle { width: 1; height: 16; color: root.colmuted }
 
 		Text {
 			id: volPerc

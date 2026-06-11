@@ -1,0 +1,1 @@
+/home/mandes/.config/emacs/elpaca/sources/treemacs/src/scripts/treemacs-find-ignored-files.py

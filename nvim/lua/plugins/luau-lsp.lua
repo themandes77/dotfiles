@@ -8,6 +8,8 @@ luau_lsp.setup({
     },
     sourcemap = {
         -- based on https://argon.wiki/docs/commands/cli#sourcemap
+        enabled = true,
+        autogenerate = true,
         generator_cmd = { "argon", "sourcemap", "--watch", "--non-scripts" },
     },
     plugin = {

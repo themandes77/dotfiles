@@ -1,0 +1,1 @@
+/home/mandes/.config/emacs/elpaca/sources/treemacs/src/elisp/treemacs-git-commit-diff-mode.el
