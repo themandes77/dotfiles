@@ -26,7 +26,8 @@ vim.pack.add({
     {src = "https://github.com/sainnhe/gruvbox-material"}, -- gruvbox material
     {src = "https://github.com/nvim-telescope/telescope.nvim"}, -- telescope
     {src = "https://github.com/nvim-telescope/telescope-file-browser.nvim"}, -- telescope filebrowser
-    {src = "https://github.com/nvimtools/none-ls.nvim"} -- none-ls
+    {src = "https://github.com/nvimtools/none-ls.nvim"}, -- none-ls
+    {src = "https://github.com/akinsho/toggleterm.nvim"} -- toggle term
 })
 
 require("plugins.autopairs") -- autopairs
@@ -46,6 +47,7 @@ require("plugins.nerdtree") -- nerdtree
 require("plugins.ibl")  -- ibl
 require("plugins.telescope") -- telescope
 require("plugins.nonels") -- nonels
+require("plugins.toggleterm")
 
 vim.cmd.colorscheme("gruvbox-material")
 vim.g.gruvbox_material_foreground = "original"

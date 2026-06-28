@@ -52,9 +52,47 @@ vim.lsp.config["clangd"] = {
 }
 
 vim.lsp.config["qmlls"] = {
-  cmd = {"qmlls", "-I", "/usr/lib64/qt6/qml"},
-  filetypes = {"qml", "qmljs"},
-  root_markers = { '.git' },
+    cmd = {"qmlls", "-I", "/usr/lib64/qt6/qml"},
+    filetypes = {"qml", "qmljs"},
+    root_markers = { '.git' },
+}
+
+vim.lsp.config["ast_grep"] = {
+    cmd = { 'ast-grep', 'lsp' },
+    workspace_required = true,
+    reuse_client = function(client, config)
+        config.cmd_cwd = config.root_dir
+        return client.name == config.name and client.config.cmd_cwd == config.cmd_cwd
+    end,
+    filetypes = { -- https://ast-grep.github.io/reference/languages.html
+        'css',
+        'elixir',
+        'go',
+        'haskell',
+        'html',
+        'java',
+        'javascript',
+        'javascriptreact',
+        'json',
+        'kotlin',
+        'nix',
+        'php',
+        'ruby',
+        'rust',
+        'scala',
+        'solidity',
+        'swift',
+        'typescript',
+        'typescriptreact',
+        'yaml',
+    },
+    root_markers = { 'sgconfig.yaml', 'sgconfig.yml' },
+}
+
+vim.lsp.config["ts_ls"] = {
+  cmd = { "typescript-language-server", "--stdio" },
+  filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
+  root_markers = { "package.json", "tsconfig.json", ".git" },
 }
 
 ---- // Enable LSPs \\ ----
@@ -64,6 +102,8 @@ vim.lsp.enable("marksman")
 vim.lsp.enable("clangd")
 vim.lsp.enable("qmlls")
 vim.lsp.enable("luau_ls")
+vim.lsp.enable("ast_grep")
+vim.lsp.enable("ts_ls")
 
 ---- // Autocommands \\ ----
 vim.api.nvim_create_autocmd("FileType", {

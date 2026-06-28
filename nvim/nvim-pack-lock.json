@@ -105,6 +105,10 @@
       "rev": "b3ebaedc6546c33cebc3910d3aa4963c09a8bc8b",
       "src": "https://github.com/Pearljak/terracotta.nvim"
     },
+    "toggleterm.nvim": {
+      "rev": "9a88eae817ef395952e08650b3283726786fb5fb",
+      "src": "https://github.com/akinsho/toggleterm.nvim"
+    },
     "vimwiki": {
       "rev": "a54a3002e229c4b43d69ced170ff77663a5b2c40",
       "src": "https://github.com/vimwiki/vimwiki"

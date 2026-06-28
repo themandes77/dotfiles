@@ -21,12 +21,3 @@ end, { desc = "Open code actions" })
 km.set("t", "<Esc>", "<C-\\><C-N>", {desc = "Exit terminal mode"}) -- Exit terminal mode
 
 km.set("n", "<leader>bi", ibuff.open, {desc = "Open ibuff"})
-
-km.set("n", "<leader>tv", function ()
-    local buf = vim.api.nvim_create_buf(true, true)
-    vim.api.nvim_open_win(buf, true, {
-        split = "below",
-        height = 10,
-    })
-    vim.fn.jobstart(vim.o.shell, {term = true})
-end)
