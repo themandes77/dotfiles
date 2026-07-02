@@ -32,6 +32,7 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 export PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/bob/nvim-bin"
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 export EDITOR="$HOME/.local/share/bob/nvim-bin/nvim"
 export SUDO_EDITOR="$HOME/.local/share/bob/nvim-bin/nvim"

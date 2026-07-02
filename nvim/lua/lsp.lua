@@ -95,6 +95,37 @@ vim.lsp.config["ts_ls"] = {
   root_markers = { "package.json", "tsconfig.json", ".git" },
 }
 
+local function get_python_path()
+  if vim.env.VIRTUAL_ENV then
+    return vim.fs.joinpath(vim.env.VIRTUAL_ENV, "bin", "python")
+  end
+  if vim.env.CONDA_PREFIX then
+    return vim.fs.joinpath(vim.env.CONDA_PREFIX, "bin", "python")
+  end
+  return vim.fn.exepath("python3") or vim.fn.exepath("python") or "python"
+end
+
+vim.lsp.config["basedpyright"] = {
+  cmd = { "basedpyright-langserver", "--stdio" },
+  filetypes = { "python" },
+  root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", ".git" },
+  on_new_config = function(new_config)
+    new_config.settings = vim.tbl_deep_extend("force", new_config.settings or {}, {
+      python = { pythonPath = get_python_path() },
+    })
+  end,
+  settings = {
+    basedpyright = {
+      analysis = {
+        typeCheckingMode = "basic",
+        autoSearchPaths = true,
+        useLibraryCodeForTypes = true,
+        diagnosticMode = "openFilesOnly",
+      },
+    },
+  },
+}
+
 ---- // Enable LSPs \\ ----
 
 vim.lsp.enable("lua_ls")
@@ -104,6 +135,7 @@ vim.lsp.enable("qmlls")
 vim.lsp.enable("luau_ls")
 vim.lsp.enable("ast_grep")
 vim.lsp.enable("ts_ls")
+vim.lsp.enable("basedpyright")
 
 ---- // Autocommands \\ ----
 vim.api.nvim_create_autocmd("FileType", {

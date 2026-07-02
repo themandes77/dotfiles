@@ -24,6 +24,17 @@ final_space = true
   newline = true
 
   [[blocks.segments]]
+    template = '{{ if .Env.VIRTUAL_ENV }}<cyan>({{ base .Env.VIRTUAL_ENV }}) </>{{ end }}'
+    foreground = '#4B8BBE'
+    background = 'transparent'
+    type = 'python'
+    style = 'plain'
+
+    [blocks.segments.properties]
+    display_virtual_env = true
+    display_default = false
+
+  [[blocks.segments]]
     foreground = '#4B95E9'
     background = 'transparent'
     type = 'path'
