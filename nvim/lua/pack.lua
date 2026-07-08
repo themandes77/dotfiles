@@ -27,7 +27,8 @@ vim.pack.add({
     {src = "https://github.com/nvim-telescope/telescope.nvim"}, -- telescope
     {src = "https://github.com/nvim-telescope/telescope-file-browser.nvim"}, -- telescope filebrowser
     {src = "https://github.com/nvimtools/none-ls.nvim"}, -- none-ls
-    {src = "https://github.com/akinsho/toggleterm.nvim"} -- toggle term
+    {src = "https://github.com/akinsho/toggleterm.nvim"}, -- toggle term
+    {src = "https://github.com/devxplay/herdr.nvim"}, -- herdr navigator
 })
 
 require("plugins.autopairs") -- autopairs
@@ -39,6 +40,7 @@ require("plugins.render-markdown") -- render-markdown
 require("plugins.treesitter") -- treesitter
 require("plugins.mason") -- mason
 require("plugins.fidget") -- fidget
+require("plugins.herdr") -- herdr
 require("plugins.ibuff") -- ibuff
 require("plugins.nvim-ufo") -- nvim-ufo
 require("plugins.lualine")  -- lualine
@@ -49,6 +51,4 @@ require("plugins.telescope") -- telescope
 require("plugins.nonels") -- nonels
 require("plugins.toggleterm")
 
-vim.cmd.colorscheme("gruvbox-material")
-vim.g.gruvbox_material_foreground = "original"
-vim.g.gruvbox_material_bacgkround = "hard"
+vim.cmd.colorscheme("duotone-dark")

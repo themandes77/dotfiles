@@ -1,8 +1,8 @@
 confirm-close-surface=false
-font-family = TerminessNerdFont Mono
-font-size = 17
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 15
 term=xterm-256color
 keybind = ctrl+enter=unbind
 keybind=global:ctrl+shift+a=reload_config
-theme=Gruvbox Material Dark
+theme=Duotone Dark
 

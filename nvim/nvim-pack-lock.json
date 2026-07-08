@@ -21,6 +21,10 @@
       "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
       "src": "https://github.com/ellisonleao/gruvbox.nvim"
     },
+    "herdr.nvim": {
+      "rev": "deed8496356aab90e1cc364dac4f95d898fa6067",
+      "src": "https://github.com/devxplay/herdr.nvim"
+    },
     "ibuff.nvim": {
       "rev": "92f4517fff21cb478c229600e1dd5d47a5458e6b",
       "src": "https://github.com/themandes77/ibuff.nvim"

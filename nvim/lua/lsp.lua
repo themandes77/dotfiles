@@ -46,7 +46,15 @@ vim.lsp.config["luau_lsp"] = {
 }
 
 vim.lsp.config["clangd"] = {
-	cmd = { "clangd" },
+	cmd = {
+		"clangd",
+		"--background-index",
+		"--clang-tidy",
+		"--header-insertion=iwyu",
+		"--completion-style=detailed",
+		"--function-arg-placeholders",
+		"--pch-storage=memory",
+	},
 	filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
 	root_markers = { "compile_commands.json", "compile_flags.txt", ".git" },
 }
@@ -55,6 +63,12 @@ vim.lsp.config["qmlls"] = {
     cmd = {"qmlls", "-I", "/usr/lib64/qt6/qml"},
     filetypes = {"qml", "qmljs"},
     root_markers = { '.git' },
+}
+
+vim.lsp.config["glsl_analyzer"] = {
+    cmd = { "glsl_analyzer" },
+    filetypes = { "glsl", "vert", "tesc", "tese", "frag", "geom", "comp" },
+    root_markers = { ".git" },
 }
 
 vim.lsp.config["ast_grep"] = {
@@ -109,6 +123,11 @@ vim.lsp.config["basedpyright"] = {
   cmd = { "basedpyright-langserver", "--stdio" },
   filetypes = { "python" },
   root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", ".git" },
+  capabilities = {
+    workspace = {
+      didChangeWatchedFiles = { dynamicRegistration = true },
+    },
+  },
   on_new_config = function(new_config)
     new_config.settings = vim.tbl_deep_extend("force", new_config.settings or {}, {
       python = { pythonPath = get_python_path() },
@@ -136,8 +155,19 @@ vim.lsp.enable("luau_ls")
 vim.lsp.enable("ast_grep")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("basedpyright")
+vim.lsp.enable("glsl_analyzer")
 
 ---- // Autocommands \\ ----
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+  float = {
+    border = "rounded",
+    source = true,
+  },
+})
+
 vim.api.nvim_create_autocmd("FileType", {
   callback = function ()
     pcall(vim.treesitter.start)
