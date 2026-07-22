@@ -39,7 +39,6 @@ export SUDO_EDITOR="$HOME/.local/share/bob/nvim-bin/nvim"
 export VISUAL="$HOME/.local/share/bob/nvim-bin/nvim"
 
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
 
 source /home/mandes/.zprofile
@@ -65,3 +64,5 @@ pomodoro () {
 
 alias wo="pomodoro 'work'"
 alias br="pomodoro 'break'"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

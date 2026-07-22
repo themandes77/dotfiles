@@ -71,6 +71,24 @@ vim.lsp.config["glsl_analyzer"] = {
     root_markers = { ".git" },
 }
 
+vim.lsp.config["jdtls"] = {
+  cmd = { "jdtls" },
+  filetypes = { "java" },
+  root_markers = { "pom.xml", "build.gradle", "settings.gradle", ".git" },
+}
+
+vim.lsp.config["dartls"] = {
+  cmd = { "dart", "language-server", "--protocol", "lsp" },
+  filetypes = { "dart" },
+  root_markers = { "pubspec.yaml", ".git" },
+  settings = {
+    dart = {
+      completeFunctionCalls = true,
+      showTodos = true,
+    },
+  },
+}
+
 vim.lsp.config["ast_grep"] = {
     cmd = { 'ast-grep', 'lsp' },
     workspace_required = true,
@@ -156,6 +174,8 @@ vim.lsp.enable("ast_grep")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("basedpyright")
 vim.lsp.enable("glsl_analyzer")
+vim.lsp.enable("jdtls")
+vim.lsp.enable("dartls")
 
 ---- // Autocommands \\ ----
 vim.diagnostic.config({
