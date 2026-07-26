@@ -1,3 +1,7 @@
 nvim|symlink|.config
 ghostty|symlink|.config
 ohmyposh|symlink|.config
+tmux|symlink|.config
+.zshenv|symlink|
+.zshrc|symlink|
+.zprofile|symlink|
