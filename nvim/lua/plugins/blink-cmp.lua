@@ -10,7 +10,7 @@ blink.setup({
   },
   keymap = {
     preset = "default",
-    ["<C-y>"] = { "select_and_accept" },
+    -- ["<TAB>"] = { "select_and_accept" },
     ["<C-e>"] = { "cancel" },
     ["<C-n>"] = { "select_next" },
     ["<C-p>"] = { "select_prev" },

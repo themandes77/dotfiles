@@ -61,6 +61,10 @@
       "rev": "7b9923abad60b903ece7c52940e1321d39eccc79",
       "src": "https://github.com/windwp/nvim-autopairs"
     },
+    "nvim-dora": {
+      "rev": "2bba547a6bfa1943a9bbafa4d32fc50b7b47445e",
+      "src": "https://github.com/beardedsakimonkey/nvim-dora"
+    },
     "nvim-earthsong": {
       "rev": "d02bc3ad8f01766f0f816340c59991839fb54641",
       "src": "https://github.com/guillermodotn/nvim-earthsong"
@@ -80,10 +84,6 @@
     "nvim-web-devicons": {
       "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
-    },
-    "oil.nvim": {
-      "rev": "b91ee5a77a6a9605d9c1aaf4fda74b66082c8297",
-      "src": "https://github.com/stevearc/oil.nvim"
     },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",

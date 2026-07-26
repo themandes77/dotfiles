@@ -17,7 +17,7 @@ vim.pack.add({
     {src = "https://github.com/nvim-lualine/lualine.nvim"}, --lualine
     {src = "https://github.com/kevinhwang91/nvim-ufo"}, --ufo
     {src = "https://github.com/kevinhwang91/promise-async"},
-    {src = "https://github.com/stevearc/oil.nvim"}, --oil.nvim
+    -- {src = "https://github.com/stevearc/oil.nvim"}, --oil.nvim
     {src = "https://github.com/guillermodotn/nvim-earthsong"}, --earthsong colorscheme
     {src = "https://github.com/Pearljak/terracotta.nvim"},  --terracota colorscheme
     {src = "https://github.com/lopi-py/luau-lsp.nvim"}, --luau-lsp
@@ -29,6 +29,7 @@ vim.pack.add({
     {src = "https://github.com/nvimtools/none-ls.nvim"}, -- none-ls
     {src = "https://github.com/akinsho/toggleterm.nvim"}, -- toggle term
     {src = "https://github.com/devxplay/herdr.nvim"}, -- herdr navigator
+    {src = "https://github.com/beardedsakimonkey/nvim-dora"}, -- nvim dora
 })
 
 require("plugins.autopairs") -- autopairs
@@ -49,6 +50,8 @@ require("plugins.nerdtree") -- nerdtree
 require("plugins.ibl")  -- ibl
 require("plugins.telescope") -- telescope
 require("plugins.nonels") -- nonels
-require("plugins.toggleterm")
+require("plugins.toggleterm") -- toggleterm
+-- require("plugins.lsd") -- lsd file browser
+require("plugins.dora")
 
 vim.cmd.colorscheme("duotone-dark")

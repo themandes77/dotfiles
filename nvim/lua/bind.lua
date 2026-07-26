@@ -21,3 +21,16 @@ end, { desc = "Open code actions" })
 km.set("t", "<Esc>", "<C-\\><C-N>", {desc = "Exit terminal mode"}) -- Exit terminal mode
 
 km.set("n", "<leader>bi", ibuff.open, {desc = "Open ibuff"})
+km.set("n", "<leader>e", "<cmd>Lsd<CR>", {desc = "Open file browser"})
+km.set("n", "<leader>ff", "<cmd>Ex<CR>", {desc = "Find file (Emacs-style)"})
+
+vim.api.nvim_create_augroup("CloseNetrw", {})
+vim.api.nvim_create_autocmd("BufEnter", {
+    callback = function(arg)
+        if vim.bo[arg.buf].filetype == "netrw" then
+            km.set("n", "<esc>", "<cmd>Rex<CR>", {desc = "Close netrw"})
+        end
+    end,
+    group = "CloseNetrw",
+})
+vim.api.nvim_del_augroup_by_name("CloseNetrw")
