@@ -34,9 +34,9 @@ export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-export EDITOR="$HOME/.local/share/bob/nvim-bin/nvim"
+export EDITOR=$HOME/.local/share/bob/nvim-bin/nvim
 export SUDO_EDITOR="$HOME/.local/share/bob/nvim-bin/nvim"
-export VISUAL="$HOME/.local/share/bob/nvim-bin/nvim"
+export VISUAL="nvim"
 
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
 eval "$(zoxide init zsh)"

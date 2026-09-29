@@ -7,23 +7,32 @@ vim.lsp.config["lua_ls"] = {
 		Lua = {
 			runtime = {
 				version = "LuaJIT",
+				special = {
+					["love.filesystem.load"] = "loadfile",
+				},
 			},
-      workspace = {
-        library = vim.list_extend(
-          vim.api.nvim_get_runtime_file("", true),
-          { "/usr/share/hypr/stubs" }
-        ),
-        checkThirdParty = false,
-        telemetry = { enable = false },
+			workspace = {
+				library = vim.list_extend(
+					vim.api.nvim_get_runtime_file("", true),
+					{
+						"/usr/share/hypr/stubs",
+						"${3rd}/love2d/library",
+						"${3rd}/luassert/library",
+						"${3rd}/luv/library",
+					}
+				),
+				userThirdParty = { vim.fn.expand("~/.local/share/LuaAddons") },
+				checkThirdParty = "ApplyInMemory",
+			},
+			telemetry = { enable = false },
 			diagnostics = { globals = { "hl", "vim" } },
-        format = {
-          enable = true,
-          defaultConfig = {
-            indent_style = "space",
-            indent_size = 2,
-          },
-        },
-      },
+			format = {
+				enable = true,
+				defaultConfig = {
+					indent_style = "space",
+					indent_size = 2,
+				},
+			},
 		},
 	},
 }

@@ -30,6 +30,7 @@ vim.pack.add({
     {src = "https://github.com/akinsho/toggleterm.nvim"}, -- toggle term
     {src = "https://github.com/devxplay/herdr.nvim"}, -- herdr navigator
     {src = "https://github.com/beardedsakimonkey/nvim-dora"}, -- nvim dora
+    {src = "https://github.com/ibhagwan/fzf-lua"} -- fzf-lua
 })
 
 require("plugins.autopairs") -- autopairs
