@@ -65,4 +65,6 @@ pomodoro () {
 alias wo="pomodoro 'work'"
 alias br="pomodoro 'break'"
 
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
