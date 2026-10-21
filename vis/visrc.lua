@@ -10,7 +10,7 @@ vis.events.subscribe(vis.events.WIN_OPEN, function(win)
 	vis:command("set autoindent true")
 	vis:command("set showtabs false")
 	vis:command("set expandtab false")
-	vis:command("set shell /usr/bin/env sh")
+	-- vis:map(vis.modes.VISUAL, " y", '"+y')
 end)
 
 require("plugins/vis-autoclose")

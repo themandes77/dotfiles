@@ -35,7 +35,6 @@ vim.pack.add({
 
 require("plugins.autopairs") -- autopairs
 require("plugins.blink-cmp") -- blink-cmp
--- require("plugins.oil") -- oil-nvim
 require("plugins.luasnip") -- luasnip
 require("plugins.wikivim") -- wikivim
 require("plugins.render-markdown") -- render-markdown
@@ -52,7 +51,6 @@ require("plugins.ibl")  -- ibl
 require("plugins.telescope") -- telescope
 require("plugins.nonels") -- nonels
 require("plugins.toggleterm") -- toggleterm
--- require("plugins.lsd") -- lsd file browser
 require("plugins.dora")
 
-vim.cmd.colorscheme("duotone-dark")
+vim.cmd.colorscheme("catppuccin-mocha")

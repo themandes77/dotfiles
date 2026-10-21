@@ -1,15 +1,52 @@
+echo "
+⠀⣄⣼⣿⡆⠀⠀⠀⠀⠀⠀⠀⠰⢿⣷⣦⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠈⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢹⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠸⣿⣟⠀⣠⣤⣴⣶⣶⡶⠶⠾⠾⠶⢼⣿⣧⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⢻⣿⣿⣿⡉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⢿⣶⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⢼⣿⡧⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣀⠀⠀⠀⠀⠀
+⠀⠀⠈⣿⣷⡂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⠀⠀⠀⠀⠀
+⠀⠀⠀⢹⣿⣇⠀⠀⣀⣶⣿⡿⠿⠿⣷⣦⣤⠀⠀⠀⠀⢰⣴⣾⣿⢷⣤⡀⠀⠀
+⠀⠀⠀⠀⢿⣿⡖⣸⣿⡟⠁⠀⠀⠀⠀⠻⣿⣦⠀⠀⢸⣿⠟⠀⠀⠀⠈⢿⡆⠀
+⠀⠀⠀⠀⢘⣿⣏⣿⡟⠀⣀⣄⠀⠀⠀⠀⣹⣿⡇⠀⣿⣿⠀⠀⠀⠀⣠⡄⢻⡄
+⠀⠀⠀⠀⠈⣹⣿⢻⣿⡄⠈⠁⠀⠀⠀⠀⣿⣿⠃⠀⢹⣻⣇⠀⠀⠀⠀⣠⡿⠃
+⠀⠀⠀⠀⠀⠙⣿⣏⢻⣿⣦⣄⢀⣀⣠⣼⡿⠛⣤⣠⡀⠙⠿⣷⣶⣶⠾⠟⠁⠀
+⠀⠀⠀⠀⠀⠀⢹⣿⡅⠈⠛⣿⣿⡟⠛⢫⠀⢠⣿⠋⣥⣤⣤⣿⡟⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⣿⠥⠀⣴⣶⣶⡿⠿⠿⢿⣿⣿⣿⣿⠿⠿⠏⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢸⣿⣷⣾⢻⣿⣿⡟⠀⠀⠸⣿⣿⡿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢘⣿⣿⣿⠀⢿⡹⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡠⣈⣿⣿⠏⠀⡸⠟⣹⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢹⣿⣷⣶⠷⣶⣾⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣿⣿⠏⠀⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+"
 
-. "$HOME/.rokit/env"
-export PATH="$HOME/.local/share/flutter/bin:$PATH"
-export ANDROID_HOME=$HOME/android-sdk
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
-export ANDROID_HOME=$HOME/android-sdk
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
 
-export ANDROID_HOME="$HOME/Android/Sdk"
-export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export NVM_DIR="$HOME/.nvm"
+export PATH="$HOME/.config/emacs/bin:$PATH"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
-export PATH="$PATH:$ANDROID_HOME/emulator"
-export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
-. "$HOME/.cargo/env"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/bob/nvim-bin"
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# export EDITOR=/usr/bin/vis
+export EDITOR=$HOME/.local/share/bob/nvim-bin/nvim
+export SUDO_EDITOR="$HOME/.local/share/bob/nvim-bin/nvim"
+
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
+eval "$(zoxide init zsh)"
+
+source /home/mandes/.zprofile
+
+# opencode
+export PATH=/home/mandes/.opencode/bin:$PATH
+
+export PATH=$PATH:/home/mandes/.spicetify
+unset SSH_ASKPASS
+
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

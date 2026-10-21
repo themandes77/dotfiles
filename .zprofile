@@ -9,4 +9,4 @@ alias y="yazi"
 
 export PATH=~/bin:$PATH
 
-alias fm="nnn -ed"
+alias fm="nnn -edH"

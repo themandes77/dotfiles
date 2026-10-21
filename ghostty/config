@@ -4,7 +4,5 @@ font-size = 13
 term=xterm-256color
 keybind = ctrl+enter=unbind
 keybind=global:ctrl+shift+a=reload_config
-theme=Duotone Dark
+theme=catppuccin-macchiato
 title="Ghostty" 
-
-# command = /home/mandes/.local/bin/herdr
