@@ -1,4 +1,4 @@
 session.*
-elpa/
-eln-cache/
-auto-save-list/
+.emacs.d/elpa/
+.emacs.d/eln-cache/
+.emacs.d/auto-save-list/
