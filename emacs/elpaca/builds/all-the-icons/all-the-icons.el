@@ -1,1 +1,0 @@
-/home/mandes/.config/emacs/elpaca/sources/all-the-icons/all-the-icons.el

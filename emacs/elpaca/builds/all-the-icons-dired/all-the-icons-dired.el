@@ -1,1 +1,0 @@
-/home/mandes/.config/emacs/elpaca/sources/all-the-icons-dired/all-the-icons-dired.el

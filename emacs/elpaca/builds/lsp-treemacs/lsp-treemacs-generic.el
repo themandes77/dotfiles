@@ -1,1 +1,0 @@
-/home/mandes/.config/emacs/elpaca/sources/lsp-treemacs/lsp-treemacs-generic.el

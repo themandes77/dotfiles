@@ -1,1 +1,0 @@
-/home/mandes/.config/emacs/elpaca/sources/company-mode/company-semantic.el

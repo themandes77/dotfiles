@@ -1,1 +1,0 @@
-/home/mandes/.config/emacs/elpaca/sources/evil/evil-vars.el

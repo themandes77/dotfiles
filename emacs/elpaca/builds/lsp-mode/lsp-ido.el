@@ -1,1 +1,0 @@
-/home/mandes/.config/emacs/elpaca/sources/lsp-mode/lsp-ido.el

@@ -1,1 +1,0 @@
-/home/mandes/.config/emacs/elpaca/sources/base16-emacs/build/base16-penumbra-dark-contrast-plus-plus-theme.el

@@ -1,1 +1,0 @@
-/home/mandes/.config/emacs/elpaca/sources/base16-emacs/build/base16-tokyo-night-light-theme.el

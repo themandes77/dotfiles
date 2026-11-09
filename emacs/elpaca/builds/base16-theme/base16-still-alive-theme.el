@@ -1,1 +1,0 @@
-/home/mandes/.config/emacs/elpaca/sources/base16-emacs/build/base16-still-alive-theme.el

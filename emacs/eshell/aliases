@@ -1,3 +1,0 @@
-alias ls eza -lF -a --icons
-alias cd = z
-alias y = yazi

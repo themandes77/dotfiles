@@ -6,6 +6,7 @@ alias cat="bat"
 alias cdwm="vi ~/dwm-btw/config.h"
 alias mdwm="cd ~/dwm-btw; sudo make clean install; cd -"
 alias y="yazi"
+alias code="code-oss"
 
 export PATH=~/bin:$PATH
 
